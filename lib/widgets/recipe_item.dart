@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/recipe.dart';
+import '../data/recipes.dart';
+
 
 class RecipeItem extends StatelessWidget {
   final Recipe recipe;
@@ -12,6 +14,8 @@ class RecipeItem extends StatelessWidget {
     required this.index,
     required this.onSelectRating,
   });
+ 
+
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +25,9 @@ class RecipeItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Recipe name goes here",
+               "$index , $recipes"
+
+              ,
             style: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
@@ -30,6 +36,7 @@ class RecipeItem extends StatelessWidget {
           ),
 
           const SizedBox(height: 8),
+         const ElevatedButton(onPressed: onSelectRating, child: Text("select rating"))
         ],
       ),
     );

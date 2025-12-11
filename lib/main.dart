@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:quiz2/recipe_app.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const RecipeApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class RecipeApp extends StatelessWidget {
+  const RecipeApp({super.key});
 
   @override
   Widget build(BuildContext context) {

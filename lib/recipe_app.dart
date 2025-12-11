@@ -42,6 +42,13 @@ class _RecipeAppState extends State<RecipeApp> {
       currentScreen = "recipes-screen";
     });
   }
+  int get averageRating{
+    setState(() {
+      for(int i=0; i<recipes.length;i++){
+        
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz2/screens/result_screen.dart';
 import '../widgets/recipe_item.dart';
 import '../data/recipes.dart';
 
@@ -14,8 +15,9 @@ class RecipesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: double.infinity,
+    return SingleChildScrollView(
+      padding: EdgeInsets.all(25),
+     
       child: Column(
         children: [
           ...recipes.asMap().entries.map((entry) {
@@ -30,6 +32,8 @@ class RecipesScreen extends StatelessWidget {
           }),
 
           const SizedBox(height: 20),
+
+          const ElevatedButton(onPressed: onSubmit, child: Text("Submit"))
         ],
       ),
     );
